@@ -1,0 +1,76 @@
+\hypertarget{class_controlador_puntajes}{}\section{Controlador\+Puntajes Class Reference}
+\label{class_controlador_puntajes}\index{Controlador\+Puntajes@{Controlador\+Puntajes}}
+
+
+Automatiza el manejo de los archivos de puntajes.  
+
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_controlador_puntajes_ab192cfbffc96954094f47b5b66e8cda5}{Controlador\+Puntajes}} (String nombre\+Archivo)
+\begin{DoxyCompactList}\small\item\em Crea un objeto que automatiza el manejo de puntajes en el archivo indicado. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_controlador_puntajes_ad44446c5c7a56f497edf2982d0fcc952}\label{class_controlador_puntajes_ad44446c5c7a56f497edf2982d0fcc952}} 
+int {\bfseries get\+Minimo} ()
+\item 
+void \mbox{\hyperlink{class_controlador_puntajes_a101a964a47c4ed0036f70c3a5c2d58ca}{agregar\+Puntaje}} (\mbox{\hyperlink{class_puntaje}{Puntaje}} p)
+\begin{DoxyCompactList}\small\item\em Agrega el puntaje especificado a la lista. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_controlador_puntajes_a973c3ca7103da4783b64b46cc716532e}\label{class_controlador_puntajes_a973c3ca7103da4783b64b46cc716532e}} 
+\mbox{\hyperlink{class_puntaje}{Puntaje}} {\bfseries get\+Puntaje} (int n)
+\item 
+\mbox{\Hypertarget{class_controlador_puntajes_a51d112050ac7772fe74bc1290a14f2f3}\label{class_controlador_puntajes_a51d112050ac7772fe74bc1290a14f2f3}} 
+String {\bfseries to\+String} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Automatiza el manejo de los archivos de puntajes. 
+
+Esta clase automatiza el manejo de los archivos de puntajes.
+
+Primero se debe inicializar la instancia especificando el nombre del archivo donde se desea trabajar. Esto automáticamente carga los puntajes desde el archivo, y si el archivo no existe, lo crea con una lista vacía.
+
+Una vez cargados los puntajes, se pueden leer mediante el método get\+Puntaje(), y se puede agregar un puntaje mediante \mbox{\hyperlink{class_controlador_puntajes_a101a964a47c4ed0036f70c3a5c2d58ca}{agregar\+Puntaje()}} (que lo coloca ordenado según puntaje y descarta los puntajes que exceden los 10 espacios).
+
+Los puntajes se guardan de vuelta al archivo especificado con cada llamada al método \mbox{\hyperlink{class_controlador_puntajes_a101a964a47c4ed0036f70c3a5c2d58ca}{agregar\+Puntaje()}}. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_controlador_puntajes_ab192cfbffc96954094f47b5b66e8cda5}\label{class_controlador_puntajes_ab192cfbffc96954094f47b5b66e8cda5}} 
+\index{Controlador\+Puntajes@{Controlador\+Puntajes}!Controlador\+Puntajes@{Controlador\+Puntajes}}
+\index{Controlador\+Puntajes@{Controlador\+Puntajes}!Controlador\+Puntajes@{Controlador\+Puntajes}}
+\subsubsection{\texorpdfstring{Controlador\+Puntajes()}{ControladorPuntajes()}}
+{\footnotesize\ttfamily Controlador\+Puntajes.\+Controlador\+Puntajes (\begin{DoxyParamCaption}\item[{String}]{nombre\+Archivo }\end{DoxyParamCaption})}
+
+
+
+Crea un objeto que automatiza el manejo de puntajes en el archivo indicado. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nombre\+Archivo} & El nombre del archivo donde se desea trabajar. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_controlador_puntajes_a101a964a47c4ed0036f70c3a5c2d58ca}\label{class_controlador_puntajes_a101a964a47c4ed0036f70c3a5c2d58ca}} 
+\index{Controlador\+Puntajes@{Controlador\+Puntajes}!agregar\+Puntaje@{agregar\+Puntaje}}
+\index{agregar\+Puntaje@{agregar\+Puntaje}!Controlador\+Puntajes@{Controlador\+Puntajes}}
+\subsubsection{\texorpdfstring{agregar\+Puntaje()}{agregarPuntaje()}}
+{\footnotesize\ttfamily void Controlador\+Puntajes.\+agregar\+Puntaje (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_puntaje}{Puntaje}}}]{p }\end{DoxyParamCaption})}
+
+
+
+Agrega el puntaje especificado a la lista. 
+
+Agrega el puntaje especificado a la lista, insertándolo en la posición correcta de manera que quede ordenado según el puntaje. Las entradas que exceden los diez campos se descartan.
+
+Si el nuevo puntaje tiene la misma cantidad de puntos que otro puntaje ya existente, se coloca el nuevo puntaje sobre todas las entradas con el mismo puntaje.
+
+Si el nuevo puntaje tiene menos puntos que todas las entradas, no se agrega el puntaje.
+
+Al final, los puntajes son guardados de vuelta al archivo de puntajes que se está trabajando. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Controlador\+Puntajes.\+java\end{DoxyCompactItemize}

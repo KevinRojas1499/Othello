@@ -1,0 +1,212 @@
+\hypertarget{class_tablero}{}\section{Tablero Class Reference}
+\label{class_tablero}\index{Tablero@{Tablero}}
+
+
+El tablero donde se almacena la información del juego.  
+
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_tablero_ac92adc2bd5f2ed16d8ee121523956c49}{Tablero}} (int tamano)
+\begin{DoxyCompactList}\small\item\em Inicializa el tablero con el tamaño indicado y las cuatro fichas centrales. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_tablero_af506d72b2430b8e1068ac16e50a324a6}\label{class_tablero_af506d72b2430b8e1068ac16e50a324a6}} 
+int \mbox{\hyperlink{class_tablero_af506d72b2430b8e1068ac16e50a324a6}{get\+Tamano}} ()
+\begin{DoxyCompactList}\small\item\em Retorna el tamaño del tablero. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_tablero_af35697b272eb9fa8478867da8ce49caf}{cantidad\+Negras}} ()
+\begin{DoxyCompactList}\small\item\em Cuenta la cantidad de fichas negras. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_tablero_a8467113a62a739be46f6a17ce876e97e}{cantidad\+Blancas}} ()
+\begin{DoxyCompactList}\small\item\em Cuenta la cantidad de fichas blancas. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_tablero_a885e7de2aeb202acd70c1ac8896ad1c1}{get\+Color}} (int fila, int columna)
+\begin{DoxyCompactList}\small\item\em Devuelve el color de un cuadro en el tablero. \end{DoxyCompactList}\item 
+boolean \mbox{\hyperlink{class_tablero_afbf952c36374051ba9d9a007ad2c673d}{puede\+Poner}} (int color, int fila, int columna)
+\begin{DoxyCompactList}\small\item\em Indica si se puede colocar una ficha de un color dado en un cuadro del tablero. \end{DoxyCompactList}\item 
+boolean \mbox{\hyperlink{class_tablero_a0b225d49792c0db4742c1e6aea909647}{existen\+Jugadas}} (int color)
+\begin{DoxyCompactList}\small\item\em Indica si existen jugadas válidas para un color dado en algún lugar del tablero. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_tablero_a22addb609780226aa6371c818b4d5a12}{poner}} (int color, int fila, int columna)
+\begin{DoxyCompactList}\small\item\em Coloca la pieza del color indicado en la posición indicada. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static int \mbox{\hyperlink{class_tablero_a0cdaee39a2bd8bd7fa59b2c19958650c}{color\+Opuesto}} (int color)
+\begin{DoxyCompactList}\small\item\em Invierte el color de N\+E\+G\+RO a B\+L\+A\+N\+CO y viceversa. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_tablero_a0ef9ac784851be4a99984b6a2dcede58}\label{class_tablero_a0ef9ac784851be4a99984b6a2dcede58}} 
+static final int \mbox{\hyperlink{class_tablero_a0ef9ac784851be4a99984b6a2dcede58}{N\+E\+G\+RO}} =1
+\begin{DoxyCompactList}\small\item\em Representa una casilla con una ficha negra. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_tablero_a28a1e0a4c4362e5cbcb2505b660c6855}\label{class_tablero_a28a1e0a4c4362e5cbcb2505b660c6855}} 
+static final int \mbox{\hyperlink{class_tablero_a28a1e0a4c4362e5cbcb2505b660c6855}{B\+L\+A\+N\+CO}} =-\/1
+\begin{DoxyCompactList}\small\item\em Representa una casilla con una ficha blanca. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_tablero_abbd0033f1dfd3e3d30c1b11472d057c9}\label{class_tablero_abbd0033f1dfd3e3d30c1b11472d057c9}} 
+static final int \mbox{\hyperlink{class_tablero_abbd0033f1dfd3e3d30c1b11472d057c9}{V\+A\+C\+IO}} =0
+\begin{DoxyCompactList}\small\item\em Representa una casilla vacía. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+El tablero donde se almacena la información del juego. 
+
+Cada instancia de esta clase se inicializa especificando el tamaño (cantidad de filas y columnas). Automáticamente se colocan las cuatro fichas centrales.
+
+El tablero consiste en una matriz cuadrada con los tres posibles valores N\+E\+G\+RO, B\+L\+A\+N\+CO y V\+A\+C\+IO.
+
+Esta clase se encarga de indicar si se puede o no colocar una ficha en un lugar especificado y poner las fichas cuando se le indica (realizando las sustituciones de las piezas que come). 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_tablero_ac92adc2bd5f2ed16d8ee121523956c49}\label{class_tablero_ac92adc2bd5f2ed16d8ee121523956c49}} 
+\index{Tablero@{Tablero}!Tablero@{Tablero}}
+\index{Tablero@{Tablero}!Tablero@{Tablero}}
+\subsubsection{\texorpdfstring{Tablero()}{Tablero()}}
+{\footnotesize\ttfamily Tablero.\+Tablero (\begin{DoxyParamCaption}\item[{int}]{tamano }\end{DoxyParamCaption})}
+
+
+
+Inicializa el tablero con el tamaño indicado y las cuatro fichas centrales. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tamano} & El tamaño del tablero. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_tablero_a8467113a62a739be46f6a17ce876e97e}\label{class_tablero_a8467113a62a739be46f6a17ce876e97e}} 
+\index{Tablero@{Tablero}!cantidad\+Blancas@{cantidad\+Blancas}}
+\index{cantidad\+Blancas@{cantidad\+Blancas}!Tablero@{Tablero}}
+\subsubsection{\texorpdfstring{cantidad\+Blancas()}{cantidadBlancas()}}
+{\footnotesize\ttfamily int Tablero.\+cantidad\+Blancas (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Cuenta la cantidad de fichas blancas. 
+
+Itera sobre los cuadros del tablero y retorna la cantidad de fichas blancas.
+
+\begin{DoxyReturn}{Returns}
+La cantidad de fichas blancas sobre el tablero. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_tablero_af35697b272eb9fa8478867da8ce49caf}\label{class_tablero_af35697b272eb9fa8478867da8ce49caf}} 
+\index{Tablero@{Tablero}!cantidad\+Negras@{cantidad\+Negras}}
+\index{cantidad\+Negras@{cantidad\+Negras}!Tablero@{Tablero}}
+\subsubsection{\texorpdfstring{cantidad\+Negras()}{cantidadNegras()}}
+{\footnotesize\ttfamily int Tablero.\+cantidad\+Negras (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Cuenta la cantidad de fichas negras. 
+
+Itera sobre los cuadros del tablero y retorna la cantidad de fichas negras.
+
+\begin{DoxyReturn}{Returns}
+La cantidad de fichas negras sobre el tablero. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_tablero_a0cdaee39a2bd8bd7fa59b2c19958650c}\label{class_tablero_a0cdaee39a2bd8bd7fa59b2c19958650c}} 
+\index{Tablero@{Tablero}!color\+Opuesto@{color\+Opuesto}}
+\index{color\+Opuesto@{color\+Opuesto}!Tablero@{Tablero}}
+\subsubsection{\texorpdfstring{color\+Opuesto()}{colorOpuesto()}}
+{\footnotesize\ttfamily static int Tablero.\+color\+Opuesto (\begin{DoxyParamCaption}\item[{int}]{color }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Invierte el color de N\+E\+G\+RO a B\+L\+A\+N\+CO y viceversa. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em color} & El color que se desea invertir. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Si color es B\+L\+A\+N\+CO retorna N\+E\+G\+RO. Si color es N\+E\+G\+RO retorna B\+L\+A\+N\+CO. En cualquier otro caso retorna V\+A\+C\+IO. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_tablero_a0b225d49792c0db4742c1e6aea909647}\label{class_tablero_a0b225d49792c0db4742c1e6aea909647}} 
+\index{Tablero@{Tablero}!existen\+Jugadas@{existen\+Jugadas}}
+\index{existen\+Jugadas@{existen\+Jugadas}!Tablero@{Tablero}}
+\subsubsection{\texorpdfstring{existen\+Jugadas()}{existenJugadas()}}
+{\footnotesize\ttfamily boolean Tablero.\+existen\+Jugadas (\begin{DoxyParamCaption}\item[{int}]{color }\end{DoxyParamCaption})}
+
+
+
+Indica si existen jugadas válidas para un color dado en algún lugar del tablero. 
+
+Esta función itera sobre cada casilla del tablero, invocando al método \mbox{\hyperlink{class_tablero_afbf952c36374051ba9d9a007ad2c673d}{puede\+Poner()}} y retorna true si se puede poner en algún lugar y false si no.
+
+
+\begin{DoxyParams}{Parameters}
+{\em color} & El color de la ficha que se quiere colocar. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true si existe alguna jugada en el tablero, false si no. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_tablero_a885e7de2aeb202acd70c1ac8896ad1c1}\label{class_tablero_a885e7de2aeb202acd70c1ac8896ad1c1}} 
+\index{Tablero@{Tablero}!get\+Color@{get\+Color}}
+\index{get\+Color@{get\+Color}!Tablero@{Tablero}}
+\subsubsection{\texorpdfstring{get\+Color()}{getColor()}}
+{\footnotesize\ttfamily int Tablero.\+get\+Color (\begin{DoxyParamCaption}\item[{int}]{fila,  }\item[{int}]{columna }\end{DoxyParamCaption})}
+
+
+
+Devuelve el color de un cuadro en el tablero. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em fila} & La fila de donde se quiere obtener el color. \\
+\hline
+{\em columna} & La columna de donde se quiere obtener el color. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retorna alguno de los valores \mbox{\hyperlink{class_tablero_abbd0033f1dfd3e3d30c1b11472d057c9}{Tablero.\+V\+A\+C\+IO}}, \mbox{\hyperlink{class_tablero_a0ef9ac784851be4a99984b6a2dcede58}{Tablero.\+N\+E\+G\+RO}} o \mbox{\hyperlink{class_tablero_a28a1e0a4c4362e5cbcb2505b660c6855}{Tablero.\+B\+L\+A\+N\+CO}}, según corresponda. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_tablero_a22addb609780226aa6371c818b4d5a12}\label{class_tablero_a22addb609780226aa6371c818b4d5a12}} 
+\index{Tablero@{Tablero}!poner@{poner}}
+\index{poner@{poner}!Tablero@{Tablero}}
+\subsubsection{\texorpdfstring{poner()}{poner()}}
+{\footnotesize\ttfamily void Tablero.\+poner (\begin{DoxyParamCaption}\item[{int}]{color,  }\item[{int}]{fila,  }\item[{int}]{columna }\end{DoxyParamCaption})}
+
+
+
+Coloca la pieza del color indicado en la posición indicada. 
+
+Coloca la pieza del color indicado en la posición indicada y sustituye las piezas que se come por el nuevo color. Invocar este método en un lugar inválido (fuera del tablero o que no admita una jugada válida) resulta en una excepción.
+
+
+\begin{DoxyParams}{Parameters}
+{\em color} & El color de la ficha que se desea poner. \\
+\hline
+{\em fila} & La fila de la casilla. \\
+\hline
+{\em columna} & La columna de la casilla. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_tablero_afbf952c36374051ba9d9a007ad2c673d}\label{class_tablero_afbf952c36374051ba9d9a007ad2c673d}} 
+\index{Tablero@{Tablero}!puede\+Poner@{puede\+Poner}}
+\index{puede\+Poner@{puede\+Poner}!Tablero@{Tablero}}
+\subsubsection{\texorpdfstring{puede\+Poner()}{puedePoner()}}
+{\footnotesize\ttfamily boolean Tablero.\+puede\+Poner (\begin{DoxyParamCaption}\item[{int}]{color,  }\item[{int}]{fila,  }\item[{int}]{columna }\end{DoxyParamCaption})}
+
+
+
+Indica si se puede colocar una ficha de un color dado en un cuadro del tablero. 
+
+Este método verifica que la casilla donde se quiere colocar la ficha esté vacía y que la jugada sea válida, es decir, que pueda comer piezas del color opuesto al colocar la ficha.
+
+
+\begin{DoxyParams}{Parameters}
+{\em color} & El color de la ficha que se quiere poner. \\
+\hline
+{\em fila} & La fila de donde se quiere obtener el color. \\
+\hline
+{\em columna} & La columna de donde se quiere obtener el color. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true si puede se puede poner una ficha del \textquotesingle{}color\textquotesingle{} en el lugar especificado 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Tablero.\+java\end{DoxyCompactItemize}
